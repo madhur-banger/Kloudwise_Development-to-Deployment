@@ -2,8 +2,8 @@ name: Deploy to S3 and Invalidate CloudFront Cache
 
 on:
   push:
-    branches:
-      - main  # Replace 'main' with your default branch if different
+    branches:  # Ensures the workflow won't trigger on `main`
+      - main
 
 jobs:
   deploy:
@@ -23,13 +23,3 @@ jobs:
       - name: Sync website files to S3
         run: |
           aws s3 sync . s3://${{ secrets.S3_BUCKET_NAME }} --delete
-
-      - name: Invalidate CloudFront cache
-        run: |
-          aws cloudfront create-invalidation \
-            --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} \
-            --paths "/*"
-
-      - name: List S3 bucket contents (optional for verification)
-        run: |
-          aws s3 ls s3://${{ secrets.S3_BUCKET_NAME }}
