@@ -59,7 +59,7 @@ const Home = () => {
   variants={itemVariants}
   className="mt-5 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl mb-4"
 >
-  Design Build Deploy{' '}
+  Design Build Deploy{' '}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <span className="gradient-text">Kloudwise</span>
 </motion.h1>
 <motion.p 

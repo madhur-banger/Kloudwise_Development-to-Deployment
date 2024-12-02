@@ -1,9 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import About from './pages/About'
-//import Blog from './pages/Documentation'
-import BlogDetail from './pages/BlogDetail'
-import BlogEditor from './pages/BlogEditor'
 import Home from './pages/Home'
 import Services from './pages/Services'
 import DeploymentServices from './pages/services/DeploymentServices'
@@ -37,8 +34,6 @@ function App() {
               <Route path="/documentation" element={<DocumentationPage />} />
               <Route path="/documentation/quick-start" element={<QuickStartPage />} />
               <Route path="/documentation/guides" element={<GuidesPage />} />
-              <Route path="/blog/new" element={<BlogEditor />} />
-              <Route path="/blog/:id" element={<BlogDetail />} />
               <Route path="/about" element={<About />} />
             </Routes>
           </main>
