@@ -98,9 +98,12 @@ export default function DocumentationPage() {
             <p className="text-white/90 mb-6">
               Can't find what you're looking for? Our support team is here to help.
             </p>
-            <button className="px-6 py-2 bg-white text-blue-600 rounded-md font-medium hover:bg-opacity-90 transition-opacity">
-              Contact Support
-            </button>
+            <Link
+              to="/contact"
+              className="rounded-md bg-white px-8 py-3 text-base font-semibold text-blue-600 shadow-sm hover:bg-blue-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white inline-block"
+            >
+              Schedule a Consultation
+            </Link>
           </div>
         </motion.div>
       </div>

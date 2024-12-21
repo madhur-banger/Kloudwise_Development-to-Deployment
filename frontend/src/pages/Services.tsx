@@ -1,57 +1,76 @@
-import { Cloud, Database, LineChart, Terminal } from 'lucide-react'
+import { Cloud, LineChart } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
 const Services = () => {
   const services = [
     {
-      title: 'Deployment Services',
+      title: 'Web Development Solutions',
       icon: Cloud,
-      description: 'Streamline your application deployment on AWS with our comprehensive deployment services.',
-      path: '/services/deployment',
+      description: 'Accelerate your web application development with customizable landing pages, seamless deployment, and optimized cloud infrastructure on AWS.',
+      path: '/services/web-development',
       features: [
-        'Automated deployment pipelines',
-        'Infrastructure as Code support',
-        'Multi-environment management',
-        'Rolling updates and rollbacks',
+        'Full-stack web application development with responsive landing pages',
+        'Fast and secure deployment with seamless CI/CD integration on AWS',
+        'Mobile-first design for enhanced user experience and SEO optimization',
+        'Scalable cloud architecture, database integration, and performance monitoring',
       ],
+      
+
     },
     {
-      title: 'Serverless Solutions',
-      icon: Terminal,
-      description: 'Build scalable applications with AWS Lambda and API Gateway integration.',
-      path: '/services/serverless',
-      features: [
-        'Lambda function management',
-        'API Gateway configuration',
-        'Event-driven architecture',
-        'Serverless monitoring',
-      ],
+    title: 'Scalable Cloud Deployment Solutions',
+    icon: Cloud,
+    description: 'Design, implement, and manage highly scalable, secure, and resilient cloud applications with AWS infrastructure.',
+    path: '/services/deployment',
+    features: [
+      'End-to-end cloud architecture design with secure infrastructure and high availability',
+      'Automated server provisioning, auto-scaling, and disaster recovery solutions',
+      'Comprehensive monitoring, alerting, and seamless third-party service integration',
+      'Optimized performance with load balancing, failover mechanisms, and data redundancy',
+    ],
+    
+
     },
+    
+    // {
+    //   title: 'Saas Templates',
+    //   icon: Cloud,
+    //   description: 'Streamline your SaaS application journey with expertly designed landing pages and fast, efficient deployment on AWS.',
+    //   path: '/services/serverless',
+    //   features: [
+    //     'Customizable and responsive landing page templates',
+    //     'Seamless CI/CD pipeline integration',
+    //     'Optimized for fast deployment on AWS',
+    //   ],
+
+    // },
+    
     {
       title: 'Cost Management',
       icon: LineChart,
-      description: 'Optimize your AWS spending with advanced cost management tools.',
+      description: 'Optimize your AWS spending with advanced cost management tools to help track, forecast, and reduce unnecessary costs.',
       path: '/services/cost-management',
       features: [
-        'Cost allocation tracking',
-        'Budget management',
-        'Usage optimization',
-        'Cost forecasting',
+        'Track and allocate costs effectively across teams and projects, ensuring transparent cost reporting and identification of optimization opportunities.',
+        'Implement budget management and receive alerts to monitor and control spending, preventing overspending with real-time notifications.',
+        'Optimize resource usage by identifying idle and underutilized resources, including stalled instances and volumes, and automate their deletion to reduce costs.',
+        'Leverage cost forecasting tools and optimization calculators, like AWS Cost Explorer, to predict future spending and implement cost-saving strategies such as Reserved and Spot Instances.',
       ],
-    },
-    {
-      title: 'DevOps Technology',
-      icon: Database,
-      description: 'Implement modern DevOps practices with Kubernetes and Terraform.',
-      path: '/services/devops',
-      features: [
-        'Kubernetes cluster management',
-        'Terraform infrastructure',
-        'CI/CD integration',
-        'Container orchestration',
-      ],
-    },
+    }
+    
+    // {
+    //   title: 'DevOps Technology',
+    //   icon: Database,
+    //   description: 'Implement modern DevOps practices with Kubernetes and Terraform.',
+    //   path: '/services/devops',
+    //   features: [
+    //     'Kubernetes cluster management',
+    //     'Terraform infrastructure',
+    //     'CI/CD integration',
+    //     'Container orchestration',
+    //   ],
+    // },
   ]
 
   const containerVariants = {

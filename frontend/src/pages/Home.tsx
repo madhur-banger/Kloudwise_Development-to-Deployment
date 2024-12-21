@@ -1,24 +1,39 @@
-import { ArrowRight, Cloud, DollarSign, Shield } from 'lucide-react'
+import { ArrowRight, Cloud, Code, Server, Database, Shield, GitBranch } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
 const Home = () => {
   const features = [
     {
-      name: 'Cost Management',
-      description: 'Track and optimize your AWS spending with advanced analytics and recommendations.',
-      icon: DollarSign,
+      name: 'Web Development',
+      description: 'Custom web applications built with cutting-edge technologies. From responsive designs to progressive web apps, we deliver solutions that drive business growth.',
+      icon: Code,
     },
     {
-      name: 'Cloud Security',
-      description: 'Ensure your AWS infrastructure is secure and compliant with best practices.',
-      icon: Shield,
-    },
-    {
-      name: 'Resource Optimization',
-      description: 'Optimize your cloud resources for maximum efficiency and performance.',
+      name: 'Cloud Solutions',
+      description: 'End-to-end cloud services including migration, optimization, and management. We help you leverage AWS, Azure, and GCP to their full potential.',
       icon: Cloud,
     },
+    {
+      name: 'DevOps & SRE',
+      description: 'Implement CI/CD pipelines, infrastructure as code, and site reliability engineering practices to enhance your development workflow.',
+      icon: GitBranch,
+    },
+    {
+      name: 'Web Hosting',
+      description: 'Secure, scalable hosting solutions optimized for performance. We manage the infrastructure so you can focus on your business.',
+      icon: Server,
+    },
+    {
+      name: 'Cloud Migration',
+      description: 'Seamless transition to the cloud with minimal disruption. Our experts ensure a smooth migration while optimizing costs and performance.',
+      icon: Database,
+    },
+    {
+      name: 'Security & Compliance',
+      description: 'Enterprise-grade security implementation with continuous monitoring and compliance management for peace of mind.',
+      icon: Shield,
+    }
   ]
 
   const containerVariants = {
@@ -53,37 +68,38 @@ const Home = () => {
               initial="hidden"
               animate="visible"
               variants={containerVariants}
-              className="mx-auto max-w-2xl text-center"
+              className="mx-auto max-w-3xl text-center"
             >
               <motion.h1 
-  variants={itemVariants}
-  className="mt-5 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl mb-4"
->
-  Design Build Deploy{' '}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <span className="gradient-text">Kloudwise</span>
-</motion.h1>
-<motion.p 
-  variants={itemVariants}
-  className="mt-10 text-lg leading-8 text-gray-600 dark:text-gray-300"
->
-  KloudWise helps you optimize costs, manage resources, and scale your AWS infrastructure
-  effectively. Get started today and take control of your cloud spending.
-</motion.p>
+                variants={itemVariants}
+                className="mt-5 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl mb-4"
+              >
+                Transform Your Digital Future with{' '}
+                <span className="gradient-text">KloudWise</span>
+              </motion.h1>
+              <motion.p 
+                variants={itemVariants}
+                className="mt-10 text-lg leading-8 text-gray-600 dark:text-gray-300"
+              >
+                From web development to cloud infrastructure, we deliver end-to-end technology solutions 
+                that drive innovation and growth. Our expert team brings enterprise-grade capabilities 
+                to businesses of all sizes.
+              </motion.p>
               <motion.div 
                 variants={itemVariants}
                 className="mt-10 flex items-center justify-center gap-x-6"
               >
                 <Link
                   to="/services"
-                  className="gradient-bg px-6 py-3 text-sm font-semibold text-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                  className="gradient-bg px-8 py-4 text-base font-semibold text-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                 >
-                  Get Started
+                  Explore Solutions
                 </Link>
                 <Link
-                  to="/about"
-                  className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100 flex items-center gap-1 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  to="/contact"
+                  className="text-base font-semibold leading-6 text-gray-900 dark:text-gray-100 flex items-center gap-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                 >
-                  Learn more <ArrowRight className="h-4 w-4" />
+                  Schedule Consultation <ArrowRight className="h-5 w-5" />
                 </Link>
               </motion.div>
             </motion.div>
@@ -92,7 +108,7 @@ const Home = () => {
       </div>
 
       {/* Features Section */}
-      <div className="py-24 sm:py-32 bg-gray-200 dark:bg-gray-800 transition-colors duration-200">
+      <div className="py-24 sm:py-32 bg-gray-100 dark:bg-gray-800 transition-colors duration-200">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -102,10 +118,15 @@ const Home = () => {
             className="mx-auto max-w-2xl lg:text-center"
           >
             <h2 className="text-base font-semibold leading-7 gradient-text">
-              Better Cloud Management
+              Comprehensive Technology Solutions
             </h2>
             <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
-              Everything you need to manage your AWS infrastructure
+              Your Partner in Digital Excellence
+            </p>
+            <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
+              We combine technical expertise with business acumen to deliver solutions 
+              that drive real-world results. From concept to deployment, we're with you 
+              every step of the way.
             </p>
           </motion.div>
           <motion.div 
@@ -122,11 +143,11 @@ const Home = () => {
                   variants={itemVariants}
                   className="hover-lift card-shadow rounded-2xl bg-white dark:bg-gray-900 dark:border dark:border-gray-800 p-8"
                 >
-                  <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-lg gradient-bg glow">
-                    <feature.icon className="h-6 w-6 text-white" />
+                  <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-lg gradient-bg glow">
+                    <feature.icon className="h-7 w-7 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold leading-8 text-gray-900 dark:text-white">
+                    <h3 className="text-xl font-semibold leading-8 text-gray-900 dark:text-white">
                       {feature.name}
                     </h3>
                     <p className="mt-2 text-base leading-7 text-gray-600 dark:text-gray-300">
